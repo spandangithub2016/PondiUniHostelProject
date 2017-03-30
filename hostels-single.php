@@ -1,4 +1,4 @@
-<?php /* Template Name: Hostels Master */ ?>
+<?php /* Template Name: Hostels Single */ ?>
 <?php
 /**
  * The template for displaying all pages

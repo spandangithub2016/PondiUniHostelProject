@@ -407,7 +407,7 @@ function pu_hostels_2017_scripts() {
 
     wp_enqueue_style( 'pu_hostels_2017-main', get_theme_file_uri( '/assets/css/main.css' ), array( 'pu_hostels_2017-style' ), '1.0' );
 
-    wp_enqueue_style( 'pu_hostels_2017-tangerine','http://fonts.googleapis.com/css?family=Tangerine', '1.0' );
+    wp_enqueue_style( 'pu_hostels_2017-petit-formal-script','https://fonts.googleapis.com/css?family=Petit+Formal+Script', '1.0' );
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );

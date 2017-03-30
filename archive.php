@@ -11,7 +11,7 @@
  */
 
 get_header(); ?>
-
+<h1>archive</h1>
 <div class="wrap">
 
 	<?php if ( have_posts() ) : ?>

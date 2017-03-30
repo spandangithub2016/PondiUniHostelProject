@@ -6900,6 +6900,11 @@ fieldset[disabled] .navbar-pu-normal .btn-link:focus {
 .navbar-pu-normal .dropdown-menu li a:focus {
   background-color: #005690;
 }
+.navbar-pu-normal .dropdown-menu .dropdown-header {
+  color: #eeeeee;
+  font-size: 14px;
+  border-bottom: 1px solid #fff;
+}
 .navbar-yb {
   background-color: #00f;
   border-color: #0000cc;
@@ -7008,6 +7013,11 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
 .navbar-yb .dropdown-menu li a:focus {
   background-color: #000099;
 }
+.navbar-yb .dropdown-menu .dropdown-header {
+  color: #ff0;
+  font-size: 14px;
+  border-bottom: 3px solid #ff0;
+}
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
   font-weight: normal;
 }
@@ -7023,6 +7033,11 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
   background-color: #eeeeee;
   font-weight: normal;
 }
+.navbar-default .navbar-nav .dropdown-menu .dropdown-header {
+  color: #555555;
+  font-size: 14px;
+  border-bottom: 3px solid #555555;
+}
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
   font-weight: normal;
 }
@@ -7037,6 +7052,11 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
   color: #fff;
   background-color: #333333;
   font-weight: normal;
+}
+.navbar-inverse .navbar-nav .dropdown-menu .dropdown-header {
+  color: #eeeeee;
+  font-size: 14px;
+  border-bottom: 3px solid #eeeeee;
 }
 #notice-news section {
   padding: 10px 30px;
@@ -7289,7 +7309,7 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
   color: #000;
 }
 .accordion {
-  height: 300px;
+  height: 400px;
   overflow: hidden;
   position: relative;
 }
@@ -7312,7 +7332,7 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
   margin: 0;
   padding: 0;
   width: 9999px;
-  height: 300px;
+  height: 400px;
   overflow: hidden;
   position: absolute;
   left: 0;
@@ -7323,7 +7343,7 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
   list-style: none;
   margin: 0;
   padding: 0;
-  height: 300px;
+  height: 400px;
   float: left;
   overflow: hidden;
   box-shadow: 0 0 10px 0 #000;
@@ -7339,8 +7359,8 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
   top: 0px;
   transform: rotate(-90deg);
   color: white;
-  left: -300px;
-  width: 300px;
+  left: -400px;
+  width: 400px;
   padding: 10px;
   display: block;
   transform-origin: right top;
@@ -7349,17 +7369,29 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
 }
 .accordion__img .quote {
   position: absolute;
-  color: white;
-  font-family: 'tangerine', arial, sans-serif;
-  font-size: 25px;
+  color: #fff;
+  font-size: 18px;
   top: 0px;
-  margin: 10px 10px 0px 50px;
+  margin: 10px auto;
   font-weight: bold;
-  line-height: 22px;
+  line-height: 1.4;
   display: none;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 5px;
+  max-width: 350px;
+  left: 0;
+  right: 0;
+}
+.accordion__img .quote .caption {
+  font-family: 'Petit Formal Script', cursive, sans-serif;
+}
+.accordion__img .quote .by {
+  font-size: 14px;
+  text-align: right;
+}
+.accordion__img .quote .by:before {
+  content: "― ";
 }
 #hostel-accordion {
   margin-top: 10px;
