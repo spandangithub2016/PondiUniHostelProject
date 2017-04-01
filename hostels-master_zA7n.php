@@ -1,4 +1,4 @@
-<?php /* Template Name: Hostels Master */ ?>
+<?php /* Template Name: Hostels Master ZA74*/ ?>
 <?php
 /**
  * The template for displaying all pages
@@ -16,26 +16,19 @@
  * @version 1.0
  */
 
-wp_enqueue_style( 'pu_hostels_2017-la', get_theme_file_uri( '/assets/css/liteaccordion.css' ), array( 'pu_hostels_2017-style' ), '1.0' );
-
-wp_enqueue_script( 'pu_hostels_2017-jquery-easing', get_theme_file_uri( '/assets/js/vendors/jquery.easing.1.3.js' ), array( 'jquery' ), '1.3', true );
-
-wp_enqueue_script( 'pu_hostels_2017-liteaccordion', get_theme_file_uri( '/assets/js/vendors/liteaccordion.jquery.js' ), array( 'jquery' ), '2.1.1', true );
-
-
 get_header(); ?>
 
 <div class="container-fluid">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center"><?php the_title() ?></h1>
+                <h1><?php the_title() ?></h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <div id="hostel-accordion">
-                    <ol>
+            <div class="col-md-12" id="hostel-accordion">
+                <div class="accordion" id="zA7n">
+                    <ul class="accordion__ul">
                         <?php
 
                         $args = array(
@@ -56,7 +49,7 @@ get_header(); ?>
                         }
                         wp_reset_query();
                         ?>
-                    </ol>
+                    </ul>
                 </div>
             </div>
         </div>

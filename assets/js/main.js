@@ -4,7 +4,7 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires="+ d.toUTCString();
 
     /*TODO : CRITICAL : CHANGE DOMAIN ON PRODUCTION*/
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/; domain=localhost";
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/; domain=hostels.pu";
 }
 
 function getCookie(cname) {
@@ -115,7 +115,7 @@ jQuery(document).ready(function() {
     jQuery(".btn_font_decrease").click(function() {
         currentFontScale = getCookie("accessibility-font-size");
         setCookie("accessibility-font-size", (parseInt(currentFontScale) - 1), (365*10));
-        setFontSizeFromCookie()
+        setFontSizeFromCookie();
     });
     //// Fontsize increase
     jQuery(".btn_font_increase").click(function() {
@@ -145,17 +145,15 @@ jQuery(document).ready(function() {
         setColorScheme("normal");
     });
 
-    var accordionAnimationCallBacks = {
-        mouseoutCB: function(a) {
-            x = jQuery(a).children().children()[2];
-
-            jQuery(x).css('display', 'none');
-        },
-        mouseoverCB: function(a) {
-            x = jQuery(a).children().children()[2];
-            jQuery(x).fadeIn(800);
-        }
-    }
-
-    jQuery('#zA7n').zA7n(accordionAnimationCallBacks);
+    jQuery('#hostel-accordion').liteAccordion({
+        responsive: true,
+        autoScaleImages : true,
+        maxContainerWidth : 1200,
+        headerWidth: 30,
+        containerHeight : 500,
+        autoPlay : false,
+        pauseOnHover : true,
+        theme : 'basic',
+        linkable : true
+    });
 })

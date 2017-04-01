@@ -137,8 +137,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
                  $glyph_class = "";
                  foreach($item->classes as $class) {
                      $exploded = explode("-", $class);
-                     if(count($exploded) == 2 and $exploded[0] === "ic") {
-                         $glyph_class = $exploded[1];
+                     if(count($exploded) >= 2 and $exploded[0] === "ic") {
+                         unset($exploded[0]);
+                         $glyph_class = implode('-',$exploded);
                      }
                  }
 

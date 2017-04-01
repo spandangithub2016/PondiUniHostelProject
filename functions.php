@@ -55,6 +55,8 @@ function pu_hostels_2017_setup() {
 
 	add_image_size( 'pu_hostels_2017-thumbnail-avatar', 100, 100, true );
 
+    add_image_size( 'pu_hostels_2017-accordion-image', 600, 400, array( 'center', 'center' ) );
+
 	// Set the default content width.
 	$GLOBALS['content_width'] = 525;
 
@@ -407,7 +409,9 @@ function pu_hostels_2017_scripts() {
 
     wp_enqueue_style( 'pu_hostels_2017-main', get_theme_file_uri( '/assets/css/main.css' ), array( 'pu_hostels_2017-style' ), '1.0' );
 
-    wp_enqueue_style( 'pu_hostels_2017-petit-formal-script','https://fonts.googleapis.com/css?family=Petit+Formal+Script', '1.0' );
+
+    // wp_enqueue_style( 'pu_hostels_2017-petit-formal-script','https://fonts.googleapis.com/css?family=Petit+Formal+Script', '1.0' );
+    wp_enqueue_style( 'pu_hostels_2017-damion','https://fonts.googleapis.com/css?family=Damion', '1.0' );
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
@@ -436,10 +440,9 @@ function pu_hostels_2017_scripts() {
 
     wp_enqueue_script( 'jquery-slimscroll', get_theme_file_uri( '/assets/js/vendors/jquery.slimscroll.min.js' ), array( 'jquery' ), '1.0', true );
 
-    wp_enqueue_script( 'pu_hostels_2017-limit', get_theme_file_uri( '/assets/js/vendors/limit.js' ), array( 'jquery' ), '1.0', true );
-    wp_enqueue_script( 'pu_hostels_2017-limit', get_theme_file_uri( '/assets/js/vendors/limit.js' ), array( 'jquery' ), '1.0', true );
-
-    wp_enqueue_script( 'pu_hostels_2017-zA7n', get_theme_file_uri( '/assets/js/vendors/zA7n-min_custom.js' ), array( 'jquery' ), '1.0', true );
+    // wp_enqueue_script( 'pu_hostels_2017-limit', get_theme_file_uri( '/assets/js/vendors/limit.js' ), array( 'jquery' ), '1.0', true );
+    //
+    // wp_enqueue_script( 'pu_hostels_2017-zA7n', get_theme_file_uri( '/assets/js/vendors/zA7n-min_custom.js' ), array( 'jquery' ), '1.0', true );
 
     wp_enqueue_script( 'pu_hostels_2017-main', get_theme_file_uri( '/assets/js/main.js' ), array( 'jquery' ), '1.0', true );
 
@@ -567,3 +570,8 @@ require_once get_parent_theme_file_path( '/inc/wp-bootstrap-navwalker-custom.php
  * Custom Post Types
  */
 require_once get_parent_theme_file_path( '/inc/custom-post-types.php' );
+
+/**
+ * Custom Shortcodes
+ */
+require_once get_parent_theme_file_path( '/inc/custom-shortcodes.php' );

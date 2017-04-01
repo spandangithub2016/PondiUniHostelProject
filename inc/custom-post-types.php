@@ -40,5 +40,21 @@ function create_post_type() {
         'supports' => array( 'title', 'editor' )
         )
     );
+
+    // Register Post Type : Admin Staff
+    register_post_type(
+        'admin-staff',
+        array(
+            'labels' => array(
+            'name' => __( 'Admin Staff' ),
+            'singular_name' => __( 'Admin Staff' )
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'admin-staff'),
+         'hierarchical' => true,
+        'supports' => array( 'title', 'thumbnail', 'page-attributes')
+        )
+    );
 }
 add_action( 'init', 'create_post_type' );

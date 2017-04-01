@@ -135,7 +135,7 @@
                     <?php /* Primary navigation */
                         wp_nav_menu( array(
                           'menu' => 'main-menu',
-                          'depth' => 2,
+                          'depth' => 3,
                           'container' => false,
                           'menu_class' => 'nav navbar-nav',
                           //Process nav menu using our custom nav walker

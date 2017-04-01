@@ -28,9 +28,6 @@
                      a.css({
                          width: u + "px"
                      }, callback.mouseoutCB(i))
-                 },
-                 focus: function(n) {
-                    console.log("focus");
                  }
              })
          }), s(), n(t).on("resize", function() {
