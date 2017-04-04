@@ -34,7 +34,7 @@ get_header(); ?>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div id="hostel-accordion">
+                <div id="hostel-accordion" class="hidden-xs">
                     <ol>
                         <?php
 
@@ -58,6 +58,34 @@ get_header(); ?>
                         ?>
                     </ol>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <nav id="hostel-master-list">
+                    <ul class="nav nav-pills nav-stacked">
+                        <?php
+
+                        $args = array(
+                            'post_type'      => 'page',
+                            'posts_per_page' => -1,
+                            'post_parent'    => $post->ID,
+                            'order'          => 'ASC',
+                            'orderby'        => 'title'
+                         );
+
+
+                        $parent = new WP_Query( $args );
+
+                        if ( $parent->have_posts() ) {
+                            while ( $parent->have_posts() ) { $parent->the_post();
+                                echo "<li><a href='" . esc_url( apply_filters( 'the_permalink' , get_permalink( $post ), $post ) )  . "'>" . get_the_title() . "</a></li>";
+                            }
+                        }
+                        wp_reset_query();
+                        ?>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>

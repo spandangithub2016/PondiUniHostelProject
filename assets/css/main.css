@@ -6219,6 +6219,7 @@ button.close {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   line-height: 1;
+  margin: 0 auto;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
@@ -7556,9 +7557,66 @@ article.admin-staff-profile section p .btn-sm {
 article.admin-staff-profile section hr {
   margin: 5px;
 }
+#warden-info article.admin-staff-profile {
+  border: 1px solid #0075c3;
+  border-radius: 5px;
+}
+#warden-info article.admin-staff-profile header {
+  margin: 0px;
+}
+#warden-info article.admin-staff-profile header h1 {
+  background-color: #0075c3;
+}
+#hostel-master-list {
+  margin: 10px auto;
+}
+#hostel-master-list a {
+  background-color: #0075c3;
+  color: #fff;
+}
+#hostel-master-list a:hover,
+#hostel-master-list a:focus,
+#hostel-master-list a:active {
+  background-color: #00385d;
+}
+#hostel-master-list .active > a {
+  background-color: #00385d;
+}
+figure#hostel-page-thumbnail figcaption {
+  position: relative;
+  margin-top: 10px;
+  background-color: #0075c3;
+  top: 0px;
+  left: 0px;
+}
+figure#hostel-page-thumbnail img {
+  position: relative;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.4) inset;
+}
+figure#hostel-page-thumbnail .img:before,
+figure#hostel-page-thumbnail .img:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  border-radius: 10px;
+}
+figure#hostel-page-thumbnail .img:after {
+  right: 10px;
+  left: auto;
+  transform: skew(8deg) rotate(3deg);
+}
 .row-eq-height {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+#panorama {
+  height: 400px;
+  width: 100%;
 }

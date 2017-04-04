@@ -1,7 +1,7 @@
 <?php
 
 //[admin-staff]
-function shotcode_admin_staff( $atts ){
+function shortcode_admin_staff( $atts ){
 
     $a = shortcode_atts( array(
         'slug' => ''
@@ -31,4 +31,4 @@ function shotcode_admin_staff( $atts ){
         return "Invalid Post";
     }
 }
-add_shortcode( 'admin-staff', 'shotcode_admin_staff' );
+add_shortcode( 'admin-staff', 'shortcode_admin_staff' );

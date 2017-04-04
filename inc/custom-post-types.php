@@ -56,5 +56,20 @@ function create_post_type() {
         'supports' => array( 'title', 'thumbnail', 'page-attributes')
         )
     );
+
+    // Register Post Type : Notice
+    register_post_type(
+        'home-carousel',
+        array(
+            'labels' => array(
+            'name' => __( 'Homepage Carousel Images' ),
+            'singular_name' => __( 'Homepage Carousel Images' )
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'home-carousel'),
+        'supports' => array( 'title', 'thumbnail', 'page-attributes' )
+        )
+    );
 }
 add_action( 'init', 'create_post_type' );

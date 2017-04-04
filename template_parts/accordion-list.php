@@ -6,7 +6,7 @@
     ?>><span><?php echo strtoupper(get_the_title()); ?></span></h2>
     <div>
         <figure>
-            <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), $size = 'pu_hostels_2017-accordion-image' ) ?>" alt="image" />
+            <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), $size = 'pu_hostels_2017-accordion-image' ) ?>" alt="Image contains a picture of <?php echo get_the_title() ?>, Pondicherry University" />
             <?php if( !empty(get_field('quote'))): ?>
                 <figcaption>
                     <p class="caption"><span class="quote-mark">“</span><?php the_field('quote') ?><span class="quote-mark">”</span></p>

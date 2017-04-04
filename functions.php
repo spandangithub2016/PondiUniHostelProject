@@ -17,6 +17,11 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	return;
 }
 
+
+@ini_set( 'upload_max_size' , '10M' );
+@ini_set( 'post_max_size', '10M');
+@ini_set( 'max_execution_time', '300' );
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *

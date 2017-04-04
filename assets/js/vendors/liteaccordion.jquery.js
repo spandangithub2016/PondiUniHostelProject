@@ -501,3 +501,17 @@
     };
 
 })(jQuery);
+
+
+
+jQuery('#hostel-accordion').liteAccordion({
+        responsive: true,
+        autoScaleImages : true,
+        maxContainerWidth : 1200,
+        headerWidth: 30,
+        containerHeight : 500,
+        autoPlay : false,
+        pauseOnHover : true,
+        theme : 'basic',
+        linkable : true
+});
