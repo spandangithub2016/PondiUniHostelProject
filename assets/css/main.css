@@ -7588,10 +7588,12 @@ figure#hostel-page-thumbnail figcaption {
   background-color: #0075c3;
   top: 0px;
   left: 0px;
+  max-width: 100%;
 }
 figure#hostel-page-thumbnail img {
   position: relative;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.4) inset;
+  border-radius: 5px;
 }
 figure#hostel-page-thumbnail .img:before,
 figure#hostel-page-thumbnail .img:after {
@@ -7609,6 +7611,82 @@ figure#hostel-page-thumbnail .img:after {
   right: 10px;
   left: auto;
   transform: skew(8deg) rotate(3deg);
+}
+#panorama {
+  position: relative;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.4) inset;
+  border-radius: 5px;
+}
+#panorama:before,
+#panorama:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  border-radius: 10px;
+}
+#panorama:after {
+  right: 10px;
+  left: auto;
+  transform: skew(8deg) rotate(3deg);
+}
+/* sidebar */
+#amenities-sidebar {
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* all links */
+#amenities-sidebar .nav > li > a {
+  color: #00385d;
+  border-left: 2px solid transparent;
+  padding: 4px 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+/* nested links */
+#amenities-sidebar .nav .nav > li > a {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 14px;
+}
+/* active & hover links */
+#amenities-sidebar .nav > .active > a,
+#amenities-sidebar .nav > li > a:hover,
+#amenities-sidebar .nav > li > a:focus {
+  color: #0075c3;
+  text-decoration: none;
+  background-color: transparent;
+  border-left-color: #0075c3;
+}
+/* all active links */
+#amenities-sidebar .nav > .active > a,
+#amenities-sidebar .nav > .active:hover > a,
+#amenities-sidebar .nav > .active:focus > a {
+  font-weight: 700;
+}
+/* nested active links */
+#amenities-sidebar .nav .nav > .active > a,
+#amenities-sidebar .nav .nav > .active:hover > a,
+#amenities-sidebar .nav .nav > .active:focus > a {
+  font-weight: 500;
+}
+/* hide inactive nested list */
+#amenities-sidebar .nav ul.nav {
+  display: none;
+}
+/* show active nested list */
+#amenities-sidebar .nav > .active > ul.nav {
+  display: block;
+}
+#amenities-sidebar > ul.affix {
+  top: 60px;
+  width: 150px;
 }
 .row-eq-height {
   display: -webkit-box;

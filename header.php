@@ -25,7 +25,7 @@
 <link rel="shortcut icon" type="image/png" href="<?= get_template_directory_uri(); ?>/assets/images/favicon.png">
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
     <!-- Page Wrap -->
     <div id="page-wrap">
         <header class="container" id="page-header">
@@ -113,7 +113,7 @@
 
 
         <!-- Primary Navigation : Main Menu -->
-        <nav class="navbar navbar-pu-normal" data-spy="affix" data-offset-top="140" data-color-class-setting="navbar-pu-normal" data-color-class-wb="navbar-inverse" data-color-class-bw="navbar-default" data-color-class-yb="navbar-yb"  data-color-class-normal="navbar-pu-normal" role="navigation" aria-label="Main menu">
+        <nav class="navbar navbar-pu-normal" data-spy="affix" data-offset-top="200" data-color-class-setting="navbar-pu-normal" data-color-class-wb="navbar-inverse" data-color-class-bw="navbar-default" data-color-class-yb="navbar-yb"  data-color-class-normal="navbar-pu-normal" role="navigation" aria-label="Main menu">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">

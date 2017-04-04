@@ -145,4 +145,14 @@ jQuery(document).ready(function() {
         setColorScheme("normal");
     });
 
+    if(jQuery("#amenities-sidebar").length) {
+        jQuery('body').scrollspy({
+            target: '#amenities-sidebar',
+            offset: 100,
+        });
+    }
+
+    var shiftWindow = function() { scrollBy(0, -50) };
+    window.addEventListener("hashchange", shiftWindow);
+    function load() { if (window.location.hash) shiftWindow(); }
 })

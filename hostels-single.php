@@ -40,14 +40,14 @@ get_header(); ?>
                 <header class="text-center">
                     <h1 class="page-heading center-block" data-default-font-size="36"><?php the_title() ?></h1>
                     <?php if(!empty(get_field('360_image'))): ?>
-                        <div id="panorama" data-url="<?php echo get_field('360_image')["url"] ?>" data-title="<?php the_title() ?>"></div>
+                        <div id="panorama" data-url="<?php echo get_field('360_image')["url"] ?>" data-title="<?php the_title() ?>" data-preview-url="<?php echo get_the_post_thumbnail_url( get_the_ID(), $size = 'full' ) ?>"></div>
                     <?php endif; ?>
                     <hr>
                 </header>
                 <div class="row">
-                    <div class="<?php if ( is_page() && $post->post_parent ): ?>col-md-9 col-sm-9 col-md-push-3 col-sm-push-3<?php else: ?>col-md-12<?php endif ?>" data-default-font-size="16">
+                    <div class="<?php if ( is_page() && $post->post_parent ): ?>col-md-8 col-sm-8 col-md-push-4 col-sm-push-4<?php else: ?>col-md-12<?php endif ?>" data-default-font-size="16">
                         <figure id="hostel-page-thumbnail">
-                            <img class="img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), $size = 'pu_hostels_2017-accordion-image' ) ?>" alt="Image contains a picture of <?php echo get_the_title() ?>, Pondicherry University" />
+                            <img class="img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), $size = 'full' ) ?>" alt="Image contains a picture of <?php echo get_the_title() ?>, Pondicherry University" />
                             <figcaption>
                                 <p class="caption"><span class="quote-mark">“</span><?php echo get_field('quote') ?><span class="quote-mark">”</span></p>
                                 <p class="by"><?php echo get_field('quote_author') ?></p>
@@ -64,7 +64,7 @@ get_header(); ?>
                     </div>
 
                     <?php if ( is_page() && $post->post_parent ): ?>
-                        <div class="col-md-3 col-sm-3 col-md-pull-9 col-sm-pull-9">
+                        <div class="col-md-4 col-sm-4 col-md-pull-8 col-sm-pull-8">
 
                             <?php if(!empty(get_field('warden_slug'))): ?>
                                 <div id="warden-info">

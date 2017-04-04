@@ -34,7 +34,7 @@
                         <p>&copy; 2017 - Pondicherry Univerisity.</p>
                     </div>
                     <div class="col-md-9 text-right">
-                        Developed by <a href="#"><strong>The Royal MCA Team(2k15-18)</strong>. Maintained by <a href="#"><strong>The Royal MCA Team</strong>.
+                        Developed by <a href="#"><strong>The Royal MCA Team(2k15-18)</strong></a>. Maintained by <a href="#"><strong>The Royal MCA Team</strong>.
                     </div>
                 </div>
             </div>
