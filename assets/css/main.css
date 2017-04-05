@@ -6728,9 +6728,6 @@ button.close {
 .site-main-blue {
   color: #0075c3 !important;
 }
-.text-justify {
-  text-align: justify;
-}
 header {
   margin: 10px 0px;
 }
@@ -7451,7 +7448,6 @@ footer.wb #cc {
 #content-body.pu-normal .hostel-type {
   background-color: #0075c3;
   color: #fff;
-  padding: 5px;
 }
 #content-body.yb {
   background-color: #00f;
@@ -7612,6 +7608,36 @@ figure#hostel-page-thumbnail .img:after {
   left: auto;
   transform: skew(8deg) rotate(3deg);
 }
+.sp-slides-container,
+.google-maps,
+.ngg-gallery-img {
+  position: relative;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.4) inset;
+  border-radius: 5px;
+}
+.sp-slides-container:before,
+.google-maps:before,
+.ngg-gallery-img:before,
+.sp-slides-container:after,
+.google-maps:after,
+.ngg-gallery-img:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  border-radius: 10px;
+}
+.sp-slides-container:after,
+.google-maps:after,
+.ngg-gallery-img:after {
+  right: 10px;
+  left: auto;
+  transform: skew(8deg) rotate(3deg);
+}
 #panorama {
   position: relative;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.4) inset;
@@ -7643,10 +7669,11 @@ figure#hostel-page-thumbnail .img:after {
 /* all links */
 #amenities-sidebar .nav > li > a {
   color: #00385d;
-  border-left: 2px solid transparent;
+  border-left: 2px solid #0075c3;
   padding: 4px 20px;
   font-size: 14px;
   font-weight: 400;
+  border-radius: 0px;
 }
 /* nested links */
 #amenities-sidebar .nav .nav > li > a {
@@ -7662,7 +7689,11 @@ figure#hostel-page-thumbnail .img:after {
   color: #0075c3;
   text-decoration: none;
   background-color: transparent;
-  border-left-color: #0075c3;
+  border-left: 5px solid #0075c3;
+  border-radius: 0px;
+  -webkit-transition: all 0.7s;
+  /* Safari */
+  transition: all 0.7s;
 }
 /* all active links */
 #amenities-sidebar .nav > .active > a,
@@ -7686,7 +7717,73 @@ figure#hostel-page-thumbnail .img:after {
 }
 #amenities-sidebar > ul.affix {
   top: 60px;
-  width: 150px;
+  width: 200px;
+}
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 400px;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.foundation-stone {
+  text-align: center;
+}
+.foundation-stone h2 {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+  color: #fff;
+}
+.foundation-stone h3 {
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  font-weight: normal;
+  color: #00385d;
+  font-size: 24px;
+  border-left: 5px solid #00385d;
+}
+.foundation-stone h4 {
+  margin: 0px;
+  font-weight: normal;
+  color: #00385d;
+  position: relative;
+  font-size: 18px;
+}
+.foundation-stone h5 {
+  font-weight: bold;
+  color: #00385d;
+  position: relative;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 5px;
+  line-height: 1em;
+}
+.foundation-stone p {
+  margin: 0px;
+}
+.foundation-stone div {
+  background-color: transparent;
+  width: 420px;
+}
+.foundation-stone hr {
+  height: 2px;
+  border-top: 2px solid #0075c3;
+  margin: 5px 0;
+}
+.foundation-stone .hostel-type-pid {
+  font-size: 16px;
 }
 .row-eq-height {
   display: -webkit-box;

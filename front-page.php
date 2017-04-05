@@ -35,12 +35,12 @@ endwhile; else: ?>
                 </h1>
                 <p>Click on a notice to read full content.</p>
                 <ul class="list-group" id="notice-list">
-                    <?php
+                <?php
                     $args = array( 'post_type' => 'notice', 'posts_per_page' => 5 );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();
-                    require get_parent_theme_file_path( '/template_parts/news-notice-home-list.php' );
-                endwhile;
+                        require get_parent_theme_file_path( '/template_parts/news-notice-home-list.php' );
+                    endwhile;
                 ?>
             </ul>
         </section>
@@ -52,12 +52,12 @@ endwhile; else: ?>
             </h1>
             <p>Click on a news to read full content.</p>
             <ul id="news-list">
-                <?php
+            <?php
                 $args = array( 'post_type' => 'news', 'posts_per_page' => 5 );
                 $loop = new WP_Query( $args );
                 while ( $loop->have_posts() ) : $loop->the_post();
-                require get_parent_theme_file_path( '/template_parts/news-notice-home-list.php' );
-            endwhile;
+                    require get_parent_theme_file_path( '/template_parts/news-notice-home-list.php' );
+                endwhile;
             ?>
         </ul>
     </section>

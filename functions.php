@@ -541,6 +541,9 @@ function pu_hostels_2017_front_page_template( $template ) {
 }
 add_filter( 'frontpage_template',  'pu_hostels_2017_front_page_template' );
 
+
+remove_filter( 'the_content', 'wpautop' );
+
 /**
  * Implement the Custom Header feature.
  */

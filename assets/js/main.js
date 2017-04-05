@@ -148,7 +148,7 @@ jQuery(document).ready(function() {
     if(jQuery("#amenities-sidebar").length) {
         jQuery('body').scrollspy({
             target: '#amenities-sidebar',
-            offset: 100,
+            offset: 120,
         });
     }
 

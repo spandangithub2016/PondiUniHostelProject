@@ -8,6 +8,8 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
+ * GOOGLE MAPS API KEY : AIzaSyClyTl5h-vda0EURj_4qYLQmokIjz_nQnE, owner : Shaswata
+ *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
@@ -15,6 +17,8 @@
  * @since 1.0
  * @version 1.0
  */
+
+$gmap_api = "AIzaSyClyTl5h-vda0EURj_4qYLQmokIjz_nQnE";
 
 if(!empty(get_field('360_image'))) {
 
@@ -46,14 +50,15 @@ get_header(); ?>
                 </header>
                 <div class="row">
                     <div class="<?php if ( is_page() && $post->post_parent ): ?>col-md-8 col-sm-8 col-md-push-4 col-sm-push-4<?php else: ?>col-md-12<?php endif ?>" data-default-font-size="16">
-                        <figure id="hostel-page-thumbnail">
-                            <img class="img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), $size = 'full' ) ?>" alt="Image contains a picture of <?php echo get_the_title() ?>, Pondicherry University" />
-                            <figcaption>
-                                <p class="caption"><span class="quote-mark">“</span><?php echo get_field('quote') ?><span class="quote-mark">”</span></p>
-                                <p class="by"><?php echo get_field('quote_author') ?></p>
-                            </figcaption>
-                        </figure>
-
+                        <?php if(!empty(get_field('quote'))) : ?>
+                            <figure id="hostel-page-thumbnail">
+                                <img class="img-responsive center-block" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), $size = 'full' ) ?>" alt="Image contains a picture of <?php echo get_the_title() ?>, Pondicherry University" />
+                                <figcaption>
+                                    <p class="caption"><span class="quote-mark">“</span><?php echo get_field('quote') ?><span class="quote-mark">”</span></p>
+                                    <p class="by"><?php echo get_field('quote_author') ?></p>
+                                </figcaption>
+                            </figure>
+                        <?php endif; ?>
                         <br>
 
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -100,6 +105,19 @@ get_header(); ?>
                                     ?>
                                 </ul>
                             </nav>
+                            <?php if(!empty(get_field('google_map_location_slug'))): ?>
+                                <h4 style="border-left: 5px solid;padding-left: 5px">DIRECTIONS</h4>
+                                <div class="google-maps">
+
+                                    <iframe
+                                        width="600"
+                                        height="600"
+                                        frameborder="0" style="border:0"
+                                        src="https://www.google.com/maps/embed/v1/directions?key=<?php echo $gmap_api ?>&origin=Pondicherry+University+Gate+II+Bus+Stop&destination=<?php echo get_field('google_map_location_slug') ?>&avoid=tolls|highways&zoom=14" allowfullscreen>
+                                    </iframe>
+                                </div>
+                            <?php endif; ?>
+
                         </div>
                     <?php endif; ?>
                 </div>

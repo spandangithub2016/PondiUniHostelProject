@@ -57,18 +57,34 @@ function create_post_type() {
         )
     );
 
-    // Register Post Type : Notice
+    // Register Post Type : Amenities
     register_post_type(
-        'home-carousel',
+        'amenities',
         array(
             'labels' => array(
-            'name' => __( 'Homepage Carousel Images' ),
-            'singular_name' => __( 'Homepage Carousel Images' )
+            'name' => __( 'Amenities' ),
+            'singular_name' => __( 'Amenity' )
         ),
         'public' => true,
         'has_archive' => true,
-        'rewrite' => array('slug' => 'home-carousel'),
-        'supports' => array( 'title', 'thumbnail', 'page-attributes' )
+        'rewrite' => array('slug' => 'amenities'),
+        'hierarchical' => true,
+        'supports' => array( 'title', 'thumbnail', 'editor', 'page-attributes' )
+        )
+    );
+
+    // Register Post Type : Testimonials
+    register_post_type(
+        'testimonials',
+        array(
+            'labels' => array(
+            'name' => __( 'Testimonials' ),
+            'singular_name' => __( 'Testimonial' )
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'testimonials'),
+        'supports' => array( 'title', 'thumbnail', 'editor', 'page-attributes' )
         )
     );
 }
