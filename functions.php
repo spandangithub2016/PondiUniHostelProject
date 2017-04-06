@@ -542,6 +542,58 @@ function pu_hostels_2017_front_page_template( $template ) {
 add_filter( 'frontpage_template',  'pu_hostels_2017_front_page_template' );
 
 
+
+function pu_hostel_2017_widgets_init() {
+
+    // First footer widget area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'First Footer Widget Area', 'pu_hostel_2017' ),
+        'id' => 'first-footer-widget-area',
+        'description' => __( 'The first footer widget area', 'pu_hostel_2017' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+    // Second Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'Second Footer Widget Area', 'pu_hostel_2017' ),
+        'id' => 'second-footer-widget-area',
+        'description' => __( 'The second footer widget area', 'pu_hostel_2017' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+    // Third Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'Third Footer Widget Area', 'pu_hostel_2017' ),
+        'id' => 'third-footer-widget-area',
+        'description' => __( 'The third footer widget area', 'pu_hostel_2017' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+    // Fourth Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'Fourth Footer Widget Area', 'pu_hostel_2017' ),
+        'id' => 'fourth-footer-widget-area',
+        'description' => __( 'The fourth footer widget area', 'pu_hostel_2017' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+
+}
+
+// Register sidebars by running pu_hostel_2017_widgets_init() on the widgets_init hook.
+add_action( 'widgets_init', 'pu_hostel_2017_widgets_init' );
+
 remove_filter( 'the_content', 'wpautop' );
 
 /**
@@ -583,3 +635,7 @@ require_once get_parent_theme_file_path( '/inc/custom-post-types.php' );
  * Custom Shortcodes
  */
 require_once get_parent_theme_file_path( '/inc/custom-shortcodes.php' );
+
+function format_mobile($contact) {
+    return "+91-" . substr($contact, 0, 5) . "-" . substr($contact, 5);
+}

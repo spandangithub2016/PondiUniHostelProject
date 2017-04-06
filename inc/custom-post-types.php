@@ -11,21 +11,6 @@
 
 function create_post_type() {
 
-    // Register Post Type : News
-    register_post_type(
-        'news',
-        array(
-            'labels' => array(
-            'name' => __( 'News' ),
-            'singular_name' => __( 'News' )
-        ),
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'news'),
-        'supports' => array( 'title', 'editor' )
-        )
-    );
-
     // Register Post Type : Notice
     register_post_type(
         'notice',
@@ -84,7 +69,7 @@ function create_post_type() {
         'public' => true,
         'has_archive' => true,
         'rewrite' => array('slug' => 'testimonials'),
-        'supports' => array( 'title', 'thumbnail', 'editor', 'page-attributes' )
+        'supports' => array( 'title', 'thumbnail', 'page-attributes' )
         )
     );
 }

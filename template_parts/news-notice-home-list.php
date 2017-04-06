@@ -1,7 +1,13 @@
 <li>
-    <a href="#">
+    <a href="<?php echo get_permalink() ?>">
         <?php
-            $date = get_the_modified_date('M-d-Y');
+            $date = null;
+            if(!empty(get_field('issue_date'))) {
+                $issue_date = new DateTime(get_field('issue_date'));
+                $date = $issue_date->format('M-d-Y');
+            } else {
+                $date = get_the_modified_date('M-d-Y');
+            }
             $date =  explode("-", $date);
         ?>
         <span class="date">

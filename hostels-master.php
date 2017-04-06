@@ -25,7 +25,7 @@ wp_enqueue_script( 'pu_hostels_2017-liteaccordion', get_theme_file_uri( '/assets
 
 get_header(); ?>
 
-<div class="container-fluid">
+<div class="container-fluid" id="content-body" role="contentinfo" data-color-class-setting="pu-normal" data-color-class-wb="wb" data-color-class-bw="bw" data-color-class-yb="yb"  data-color-class-normal="pu-normal">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

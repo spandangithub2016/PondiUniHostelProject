@@ -7077,7 +7077,8 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
   border-radius: 10px;
   color: #FF5B5B;
 }
-#notice-news section h1.section-heading a.read-all {
+#notice-news section h1.section-heading a.read-all,
+#notice-news section h1.section-heading span.page-no {
   float: right;
   margin-top: 20px;
 }
@@ -7100,9 +7101,7 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
 }
 #notice-news section ul li a span.date {
   float: left;
-  width: 70px;
-  height: 70px;
-  padding: 0;
+  padding: 3px 15px;
   margin-right: 10px;
   line-height: 1.2;
   border-radius: 10px;
@@ -7193,13 +7192,17 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
   border: 3px solid #ff0;
   color: #ff0;
 }
-#notice-news.yb section h1.section-heading a.read-all {
+#notice-news.yb section h1.section-heading a.read-all,
+#notice-news.yb section h1.section-heading span.page-no {
   background-color: #00f;
   color: #ff0;
 }
 #notice-news.yb section h1.section-heading a.read-all:hover,
+#notice-news.yb section h1.section-heading span.page-no:hover,
 #notice-news.yb section h1.section-heading a.read-all:focus,
-#notice-news.yb section h1.section-heading a.read-all:active {
+#notice-news.yb section h1.section-heading span.page-no:focus,
+#notice-news.yb section h1.section-heading a.read-all:active,
+#notice-news.yb section h1.section-heading span.page-no:active {
   font-weight: bold;
 }
 #notice-news.yb section ul {
@@ -7237,13 +7240,17 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
   border: 3px solid #fff;
   color: #fff;
 }
-#notice-news.wb section h1.section-heading a.read-all {
+#notice-news.wb section h1.section-heading a.read-all,
+#notice-news.wb section h1.section-heading span.page-no {
   background-color: #333333;
   color: #fff;
 }
 #notice-news.wb section h1.section-heading a.read-all:hover,
+#notice-news.wb section h1.section-heading span.page-no:hover,
 #notice-news.wb section h1.section-heading a.read-all:focus,
-#notice-news.wb section h1.section-heading a.read-all:active {
+#notice-news.wb section h1.section-heading span.page-no:focus,
+#notice-news.wb section h1.section-heading a.read-all:active,
+#notice-news.wb section h1.section-heading span.page-no:active {
   font-weight: bold;
 }
 #notice-news.wb section ul {
@@ -7281,13 +7288,17 @@ fieldset[disabled] .navbar-yb .btn-link:focus {
   border: 3px solid #000;
   color: #000;
 }
-#notice-news.bw section h1.section-heading a.read-all {
+#notice-news.bw section h1.section-heading a.read-all,
+#notice-news.bw section h1.section-heading span.page-no {
   background-color: #fff;
   color: #000;
 }
 #notice-news.bw section h1.section-heading a.read-all:hover,
+#notice-news.bw section h1.section-heading span.page-no:hover,
 #notice-news.bw section h1.section-heading a.read-all:focus,
-#notice-news.bw section h1.section-heading a.read-all:active {
+#notice-news.bw section h1.section-heading span.page-no:focus,
+#notice-news.bw section h1.section-heading a.read-all:active,
+#notice-news.bw section h1.section-heading span.page-no:active {
   font-weight: bold;
 }
 #notice-news.bw section ul {
@@ -7368,6 +7379,9 @@ footer #cc {
 footer #cc a {
   color: inherit !important;
 }
+footer .btn-em {
+  min-width: 120px;
+}
 footer.pu-normal {
   background-color: #00385d;
   color: #fff;
@@ -7384,6 +7398,10 @@ footer.yb {
 footer.yb #cc {
   border-top-color: #ff0;
 }
+footer.yb .btn-em {
+  color: #ff0;
+  background-color: #000099;
+}
 footer.bw {
   background-color: #fff;
   color: #222222;
@@ -7392,6 +7410,10 @@ footer.bw {
 footer.bw #cc {
   border-top-color: #222222;
 }
+footer.bw .btn-em {
+  color: #222222;
+  background-color: #eeeeee;
+}
 footer.wb {
   background-color: #000;
   color: #fff;
@@ -7399,6 +7421,10 @@ footer.wb {
 }
 footer.wb #cc {
   border-top-color: #fff;
+}
+footer.wb .btn-em {
+  color: #eeeeee;
+  background-color: #000;
 }
 #content-body {
   padding: 10px;
@@ -7463,6 +7489,53 @@ footer.wb #cc {
   background-color: #ff0;
   color: #00f !important;
 }
+#content-body.yb #hostel-master-list a {
+  background-color: #000099;
+  color: #ff0;
+}
+#content-body.yb .admin-staff-profile {
+  border-color: #ff0;
+}
+#content-body.yb .admin-staff-profile h1 {
+  background-color: #000099;
+  color: #ff0;
+}
+#content-body.yb .admin-staff-profile .btn {
+  background-color: #000099;
+  color: #ff0;
+}
+#content-body.yb figure#hostel-page-thumbnail figcaption {
+  background-color: #000099;
+  color: #ff0;
+}
+#content-body.yb .panel-default .panel-heading {
+  background-color: #000099;
+  color: #ff0;
+  border-color: #ff0;
+}
+#content-body.yb .panel-default .panel-body {
+  background-color: #00f;
+  color: #ff0;
+}
+#content-body.yb .panel-default .panel-body .list-group-item {
+  background-color: #00f;
+}
+#content-body.yb .foundation-stone h2,
+#content-body.yb .foundation-stone h3,
+#content-body.yb .foundation-stone h4,
+#content-body.yb .foundation-stone h5,
+#content-body.yb .foundation-stone p {
+  color: #ff0;
+  border-color: #ff0;
+}
+#content-body.yb .foundation-stone .hostel-type {
+  background-color: #000099;
+  color: #ff0;
+}
+#content-body.yb #hostel-accordion .slide h2 {
+  background-color: #000099 !important;
+  color: #ff0 !important;
+}
 #content-body.bw {
   background-color: #fff;
   color: #222222;
@@ -7477,6 +7550,53 @@ footer.wb #cc {
   background-color: #222222;
   color: #fff !important;
 }
+#content-body.bw #hostel-master-list a {
+  background-color: #eeeeee;
+  color: #222222;
+}
+#content-body.bw .admin-staff-profile {
+  border-color: #eeeeee;
+}
+#content-body.bw .admin-staff-profile h1 {
+  background-color: #eeeeee;
+  color: #000;
+}
+#content-body.bw .admin-staff-profile .btn {
+  background-color: #eeeeee;
+  color: #222222;
+}
+#content-body.bw figure#hostel-page-thumbnail figcaption {
+  background-color: #eeeeee;
+  color: #222222;
+}
+#content-body.bw .panel-default .panel-heading {
+  background-color: #eeeeee;
+  color: #222222;
+  border-color: #222222;
+}
+#content-body.bw .panel-default .panel-body {
+  background-color: #fff;
+  color: #222222;
+}
+#content-body.bw .panel-default .panel-body .list-group-item {
+  background-color: #fff;
+}
+#content-body.bw .foundation-stone h2,
+#content-body.bw .foundation-stone h3,
+#content-body.bw .foundation-stone h4,
+#content-body.bw .foundation-stone h5,
+#content-body.bw .foundation-stone p {
+  color: #222222;
+  border-color: #222222;
+}
+#content-body.bw .foundation-stone .hostel-type {
+  background-color: #eeeeee;
+  color: #222222;
+}
+#content-body.bw #hostel-accordion .slide h2 {
+  background-color: #eeeeee !important;
+  color: #222222 !important;
+}
 #content-body.wb {
   background-color: #000;
   color: #fff;
@@ -7490,6 +7610,53 @@ footer.wb #cc {
 #content-body.wb .admin-details .btn.btn-sm.btn-pu:active {
   background-color: #fff;
   color: #000 !important;
+}
+#content-body.wb #hostel-master-list a {
+  background-color: #222222;
+  color: #fff;
+}
+#content-body.wb .admin-staff-profile {
+  border-color: #222222;
+}
+#content-body.wb .admin-staff-profile h1 {
+  background-color: #222222;
+  color: #fff;
+}
+#content-body.wb .admin-staff-profile .btn {
+  background-color: #222222;
+  color: #fff;
+}
+#content-body.wb figure#hostel-page-thumbnail figcaption {
+  background-color: #222222;
+  color: #fff;
+}
+#content-body.wb .panel-default .panel-heading {
+  background-color: #222222;
+  color: #fff;
+  border-color: #fff;
+}
+#content-body.wb .panel-default .panel-body {
+  background-color: #000;
+  color: #fff;
+}
+#content-body.wb .panel-default .panel-body .list-group-item {
+  background-color: #000;
+}
+#content-body.wb .foundation-stone h2,
+#content-body.wb .foundation-stone h3,
+#content-body.wb .foundation-stone h4,
+#content-body.wb .foundation-stone h5,
+#content-body.wb .foundation-stone p {
+  color: #fff;
+  border-color: #fff;
+}
+#content-body.wb .foundation-stone .hostel-type {
+  background-color: #222222;
+  color: #fff;
+}
+#content-body.wb #hostel-accordion .slide h2 {
+  background-color: #222222 !important;
+  color: #fff !important;
 }
 .admin-image {
   width: 125px;
@@ -7528,7 +7695,7 @@ article.admin-staff-profile section {
 article.admin-staff-profile section h1 {
   font-size: 16px;
   font-weight: bold;
-  padding: 0;
+  padding: 3px;
   margin: 0;
 }
 article.admin-staff-profile section h2,
@@ -7588,6 +7755,7 @@ figure#hostel-page-thumbnail figcaption {
 }
 figure#hostel-page-thumbnail img {
   position: relative;
+  width: 100%;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.4) inset;
   border-radius: 5px;
 }
@@ -7785,11 +7953,18 @@ figure#hostel-page-thumbnail .img:after {
 .foundation-stone .hostel-type-pid {
   font-size: 16px;
 }
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+@media (max-width: 991px) {
+  #warden-accordion .panel-body > .row > div {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 #panorama {
   height: 400px;

@@ -51,8 +51,10 @@ function setFontSizeFromCookie() {
             setFontSize = parseInt(defaultFontSize) + (parseInt(fs) * 2);
             elements[index].style.fontSize = setFontSize + "px";
         }
+
     }
 }
+
 
 function setColorSchemeFromCookie() {
     var cs = getCookie("accessibility-color-scheme");
@@ -97,10 +99,57 @@ function checkCookie() {
     setColorSchemeFromCookie();
 }
 
+function textNodesUnder(node){
+    var all = [];
+    for (node=node.firstChild;node;node=node.nextSibling){
+        if (node.nodeType==3) all.push(node);
+        else all = all.concat(textNodesUnder(node));
+    }
+    return all;
+}
+
+function getStyle(el,styleProp) {
+  var camelize = function (str) {
+    return str.replace(/\-(\w)/g, function(str, letter){
+      return letter.toUpperCase();
+    });
+  };
+
+  if (el.currentStyle) {
+    return el.currentStyle[camelize(styleProp)];
+  } else if (document.defaultView && document.defaultView.getComputedStyle) {
+    return document.defaultView.getComputedStyle(el,null)
+                               .getPropertyValue(styleProp);
+  } else {
+    return el.style[camelize(styleProp)];
+  }
+}
+
+function configureDataFontSize(elementID) {
+    main_node = document.getElementById(elementID);
+    if(main_node !== null) {
+        elements = textNodesUnder(main_node);
+        for(var index = 0; index < elements.length; index++) {
+            // console.log(getStyle(elements[index].parentElement, 'font-size'));
+            if(
+                elements[index].parentElement.dataset.defaultFontSize === undefined &&  elements[index].nodeValue.trim().length > 0
+            ) {
+                elements[index].parentElement.dataset.defaultFontSize = window.getComputedStyle(elements[index].parentElement, null).getPropertyValue("font-size")
+            }
+        }
+    }
+}
+
 jQuery(document).ready(function() {
 
     // Setup accessbility controls from cookie
     checkCookie();
+
+    // Select all text nodes under content-body
+    configureDataFontSize('content-body');
+    configureDataFontSize('footer');
+    configureDataFontSize('notice-news');
+
 
     // slimScroll setup
     jQuery('#notice-list').slimScroll({
